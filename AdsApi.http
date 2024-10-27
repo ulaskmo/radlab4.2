@@ -1,0 +1,124 @@
+﻿@AdsApi_HostAddress = https://localhost:7111
+
+### 
+
+GET {{AdsApi_HostAddress}}/ads/
+
+### 
+
+POST {{AdsApi_HostAddress}}/ads/
+Content-Type: application/json
+
+{
+    "description": "Laptop for sale",
+    "price": 500,
+    "seller": {
+        "id": 1,
+        "name": "John Doe",
+        "email": "john@example.com"
+    },
+    "category": {
+        "id": 1,
+        "name": "Electronics"
+    }
+}
+
+### 
+
+GET {{AdsApi_HostAddress}}/ads/1
+
+### 
+
+PUT {{AdsApi_HostAddress}}/ads/1
+Content-Type: application/json
+
+{
+    "description": "Laptop for sale, with updated description",
+    "price": 500,
+    "seller": {
+        "id": 1,
+        "name": "John Doe",
+        "email": "john@example.com"
+    },
+    "category": {
+        "id": 1,
+        "name": "Electronics"
+    }
+}
+
+### 
+
+DELETE {{AdsApi_HostAddress}}/ads/1
+
+### 
+
+POST {{AdsApi_HostAddress}}/ads/
+Content-Type: application/json
+
+{
+    "description": "Car for sale",
+    "price": 10000,
+    "seller": {
+        "id": 2,
+        "name": "Jane Doe",
+        "email": "jane@example.com"
+    },
+    "category": {
+        "id": 2,
+        "name": "Vehicles"
+    }
+}
+
+### 
+
+GET {{AdsApi_HostAddress}}/ads/
+
+### 
+
+GET {{AdsApi_HostAddress}}/ads/seller/1
+
+### 
+
+GET {{AdsApi_HostAddress}}/ads/category/2
+
+### 
+
+PUT {{AdsApi_HostAddress}}/ads/2
+Content-Type: application/json
+
+{
+    "description": "Car for sale - now with a discount!",
+    "price": 9500,
+    "seller": {
+        "id": 2,
+        "name": "Jane Doe",
+        "email": "jane@example.com"
+    },
+    "category": {
+        "id": 2,
+        "name": "Vehicles"
+    }
+}
+
+### 
+
+DELETE {{AdsApi_HostAddress}}/ads/2
+
+### 
+
+POST {{AdsApi_HostAddress}}/ads/
+Content-Type: application/json
+
+{
+    "description": "Smartphone for sale",
+    "price": 700,
+    "seller": {
+        "id": 2,
+        "name": "Jane Doe",
+        "email": "jane@example.com"
+    },
+    "category": {
+        "id": 1,
+        "name": "Electronics"
+    }
+}
